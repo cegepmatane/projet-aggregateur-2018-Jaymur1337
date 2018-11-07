@@ -17,9 +17,9 @@ namespace ProjetAgrégateur
     /// <summary>
     /// Logique d'interaction pour News.xaml
     /// </summary>
-    public partial class PokeWindow : Window
+    public partial class CryptoWindow : Window
     {
-        public PokeWindow()
+        public CryptoWindow()
         {
             InitializeComponent();
         }

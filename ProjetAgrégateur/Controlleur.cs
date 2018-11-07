@@ -12,5 +12,21 @@ namespace ProjetAgrégateur
         {
             acceuil.ChangerVersMemes();
         }
+        public void NotifierChangerVersPoke(Acceuil acceuil)
+        {
+            acceuil.ChangerVersPokemon();
+        }
+        public void NotifierChangerVersMeteo(Acceuil acceuil)
+        {
+            acceuil.ChangerVersMeteo();
+        }
+        public void NotifierChangerVersCrypto(Acceuil acceuil)
+        {
+            acceuil.ChangerVersCrypto();
+        }
+        public void NotifierChangerVersMessages(Acceuil acceuil)
+        {
+            acceuil.ChangerVersMessages();
+        }
     }
 }
