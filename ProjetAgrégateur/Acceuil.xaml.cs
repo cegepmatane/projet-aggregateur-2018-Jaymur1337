@@ -25,6 +25,7 @@ namespace ProjetAgrégateur
         public Acceuil()
         {
             InitializeComponent();
+
         }
 
         private void News_Click(object sender, RoutedEventArgs e)
@@ -38,5 +39,47 @@ namespace ProjetAgrégateur
             memes.Show();
             this.Close();
         }
+        public void ChangerVersCrypto()
+        {
+            CryptoWindow crypto = new CryptoWindow();
+            crypto.Show();
+            this.Close();
+        }
+        public void ChangerVersMessages()
+        {
+            MessagesWindow messages = new MessagesWindow();
+            messages.Show();
+            this.Close();
+        }
+        public void ChangerVersMeteo()
+        {
+            MeteoWindow meteo = new MeteoWindow();
+            meteo.Show();
+            this.Close();
+        }
+        public void ChangerVersPokemon()
+        {
+            PokeWindow poke = new PokeWindow();
+            poke.Show();
+            this.Close();
+        }
+        
+        private void Mess_Click(object sender, RoutedEventArgs e)
+        {
+            controlleur.NotifierChangerVersMessages(this);
+        }
+        private void Crypto_Click(object sender, RoutedEventArgs e)
+        {
+            controlleur.NotifierChangerVersCrypto(this);
+        }
+        private void Pokemon_Click(object sender, RoutedEventArgs e)
+        {
+            controlleur.NotifierChangerVersPoke(this);
+        }
+        private void Meteo_Click(object sender, RoutedEventArgs e)
+        {
+            controlleur.NotifierChangerVersMeteo(this);
+        }
+
     }
 }

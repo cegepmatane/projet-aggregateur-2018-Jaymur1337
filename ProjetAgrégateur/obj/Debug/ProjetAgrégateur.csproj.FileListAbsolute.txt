@@ -16,3 +16,28 @@ C:\Users\1732490\source\repos\ProjetAgrégateur\ProjetAgrégateur\obj\Debug\Proj
 C:\Users\1732490\source\repos\ProjetAgrégateur\ProjetAgrégateur\obj\Debug\ProjetAgrégateur.exe
 C:\Users\1732490\source\repos\ProjetAgrégateur\ProjetAgrégateur\obj\Debug\ProjetAgrégateur.pdb
 C:\Users\1732490\source\repos\ProjetAgrégateur\ProjetAgrégateur\obj\Debug\Windows\PokeWindow.g.cs
+C:\Users\1732490\Desktop\Projet agregateur\ProjetAgrégateur\obj\Debug\ProjetAgrégateur.csprojAssemblyReference.cache
+C:\Users\1732490\Desktop\Projet agregateur\ProjetAgrégateur\obj\Debug\Acceuil.g.cs
+C:\Users\1732490\Desktop\Projet agregateur\ProjetAgrégateur\obj\Debug\Windows\MeteoWindow.g.cs
+C:\Users\1732490\Desktop\Projet agregateur\ProjetAgrégateur\obj\Debug\Windows\MessagesWindow.g.cs
+C:\Users\1732490\Desktop\Projet agregateur\ProjetAgrégateur\obj\Debug\Windows\CryptoWindow.g.cs
+C:\Users\1732490\Desktop\Projet agregateur\ProjetAgrégateur\obj\Debug\Windows\PokeWindow.g.cs
+C:\Users\1732490\Desktop\Projet agregateur\ProjetAgrégateur\obj\Debug\Windows\MemeWindow.g.cs
+C:\Users\1732490\Desktop\Projet agregateur\ProjetAgrégateur\obj\Debug\App.g.cs
+C:\Users\1732490\Desktop\Projet agregateur\ProjetAgrégateur\obj\Debug\ProjetAgrégateur_MarkupCompile.cache
+C:\Users\1732490\Desktop\Projet agregateur\ProjetAgrégateur\obj\Debug\ProjetAgrégateur_MarkupCompile.lref
+C:\Users\1732490\Desktop\Projet agregateur\ProjetAgrégateur\obj\Debug\ProjetAgrégateur.exe
+C:\Users\1732490\Desktop\Projet agregateur\ProjetAgrégateur\obj\Debug\ProjetAgrégateur.pdb
+C:\Users\1732490\Desktop\Projet agregateur\ProjetAgrégateur\bin\Debug\ProjetAgrégateur.exe.config
+C:\Users\1732490\Desktop\Projet agregateur\ProjetAgrégateur\bin\Debug\ProjetAgrégateur.exe
+C:\Users\1732490\Desktop\Projet agregateur\ProjetAgrégateur\bin\Debug\ProjetAgrégateur.pdb
+C:\Users\1732490\Desktop\Projet agregateur\ProjetAgrégateur\obj\Debug\Acceuil.baml
+C:\Users\1732490\Desktop\Projet agregateur\ProjetAgrégateur\obj\Debug\Windows\MeteoWindow.baml
+C:\Users\1732490\Desktop\Projet agregateur\ProjetAgrégateur\obj\Debug\Windows\MessagesWindow.baml
+C:\Users\1732490\Desktop\Projet agregateur\ProjetAgrégateur\obj\Debug\Windows\CryptoWindow.baml
+C:\Users\1732490\Desktop\Projet agregateur\ProjetAgrégateur\obj\Debug\Windows\PokeWindow.baml
+C:\Users\1732490\Desktop\Projet agregateur\ProjetAgrégateur\obj\Debug\Windows\MemeWindow.baml
+C:\Users\1732490\Desktop\Projet agregateur\ProjetAgrégateur\obj\Debug\ProjetAgrégateur.g.resources
+C:\Users\1732490\Desktop\Projet agregateur\ProjetAgrégateur\obj\Debug\ProjetAgrégateur.Properties.Resources.resources
+C:\Users\1732490\Desktop\Projet agregateur\ProjetAgrégateur\obj\Debug\ProjetAgrégateur.csproj.GenerateResource.cache
+C:\Users\1732490\Desktop\Projet agregateur\ProjetAgrégateur\obj\Debug\ProjetAgrégateur.csproj.CoreCompileInputs.cache
