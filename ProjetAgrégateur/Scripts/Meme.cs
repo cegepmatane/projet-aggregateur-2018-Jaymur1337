@@ -10,7 +10,7 @@ namespace ProjetAgrégateur.Scripts
     {
         public string titre { get; set; }
 
-        public string lien { get; set; }
+        public string lienUtilisateur { get; set; }
 
         public string nomUtilisateur { get; set; }
 

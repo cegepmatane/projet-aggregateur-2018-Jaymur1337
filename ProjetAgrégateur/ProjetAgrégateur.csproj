@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{F5F5CE5B-9EA8-48E7-903E-40574AD06800}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>ProjetAgrégateur</RootNamespace>
     <AssemblyName>ProjetAgrégateur</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -56,6 +59,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Controlleur.cs" />
+    <Compile Include="Scripts\Pokemon.cs" />
+    <Compile Include="Scripts\PokemonDAO.cs" />
     <Compile Include="Windows\MeteoWindow.xaml.cs">
       <DependentUpon>MeteoWindow.xaml</DependentUpon>
     </Compile>

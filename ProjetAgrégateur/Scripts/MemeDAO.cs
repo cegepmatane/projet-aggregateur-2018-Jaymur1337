@@ -11,7 +11,6 @@ using System.Xml.Linq;
 
 namespace ProjetAgrégateur.Scripts
 {
-   
     class MemeDAO
     {
         public List<Meme> listerMemes(string rss)
@@ -31,9 +30,24 @@ namespace ProjetAgrégateur.Scripts
             {
                 XmlReader lecteurMeme = memeXML.CreateReader();
                 lecteurMeme.MoveToContent();
-                lecteurMeme.ReadToDescendant("Title");
+                lecteurMeme.ReadToDescendant("title");
                 string titre = lecteurMeme.ReadInnerXml();
-                Console.WriteLine(titre);
+                // Console.WriteLine(titre);
+
+                lecteurMeme.ReadToFollowing("name");
+                string nom = lecteurMeme.ReadInnerXml();
+                //Console.WriteLine(nom);
+
+                lecteurMeme.ReadToFollowing("uri");
+                string lienUtilisateur = lecteurMeme.ReadInnerXml();
+                //Console.WriteLine(lienUtilisateur);
+
+                Meme meme = new Meme();
+                meme.titre = titre;
+                meme.nomUtilisateur = nom;
+                meme.lienUtilisateur = lienUtilisateur;
+
+                listeMeme.Add(meme);
             }
             return listeMeme;
         }

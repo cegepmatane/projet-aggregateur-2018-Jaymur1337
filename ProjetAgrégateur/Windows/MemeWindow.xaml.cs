@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ProjetAgrégateur.Scripts;
 
 namespace ProjetAgrégateur
 {
@@ -19,14 +20,25 @@ namespace ProjetAgrégateur
     /// </summary>
     public partial class MemeWindow : Window
     {
+        string rss = "https://www.reddit.com/r/memes.rss";
         public MemeWindow()
         {
             InitializeComponent();
+            afficherMemes();
+        }
+
+        private void afficherMemes()
+        {
+            MemeDAO test = new MemeDAO();
+            List<Meme> listeMeme = test.listerMemes(rss);
+            foreach (Meme meme in listeMeme)
+            {
+                Console.WriteLine(meme.titre + "\n");
+            }
         }
 
         private void Home_Click(object sender, RoutedEventArgs e)
-        {
-            
+        {    
             Acceuil acceuil = new Acceuil();
             acceuil.Show();
             this.Close();

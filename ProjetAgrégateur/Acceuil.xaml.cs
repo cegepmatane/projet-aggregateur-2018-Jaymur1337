@@ -12,6 +12,12 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ProjetAgrégateur.Scripts;
+using System.IO;
+using System.Net;
+using System.Xml;
+using System.Text.RegularExpressions;
+using System.Xml.Linq;
 
 
 namespace ProjetAgrégateur
@@ -22,9 +28,15 @@ namespace ProjetAgrégateur
     public partial class Acceuil : Window
     {
         private Controlleur controlleur = new Controlleur();
+        
         public Acceuil()
         {
             InitializeComponent();
+            afficherAcceuil();
+        }
+
+        public void afficherAcceuil()
+        {
 
         }
 
