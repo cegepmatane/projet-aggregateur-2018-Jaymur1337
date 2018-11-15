@@ -28,7 +28,15 @@ namespace ProjetAgrégateur
     public partial class Acceuil : Window
     {
         private Controlleur controlleur = new Controlleur();
-        
+        private Navigateur navigation = new Navigateur();
+
+        public int IdAcceuil = 0;
+        public int IdMemes = 1;
+        public int IdMessages = 2;
+        public int IdCrypto = 3;
+        public int IdMeteo = 4;
+        public int IdPoke = 5;
+
         public Acceuil()
         {
             InitializeComponent();
@@ -47,32 +55,27 @@ namespace ProjetAgrégateur
 
         public void ChangerVersMemes()
         {
-            MemeWindow memes = new MemeWindow();
-            memes.Show();
+            navigation.changerFenetre(IdAcceuil,IdMemes);
             this.Close();
         }
         public void ChangerVersCrypto()
         {
-            CryptoWindow crypto = new CryptoWindow();
-            crypto.Show();
+            navigation.changerFenetre(IdAcceuil, IdCrypto);
             this.Close();
         }
         public void ChangerVersMessages()
         {
-            MessagesWindow messages = new MessagesWindow();
-            messages.Show();
+            navigation.changerFenetre(IdAcceuil, IdMessages);
             this.Close();
         }
         public void ChangerVersMeteo()
         {
-            MeteoWindow meteo = new MeteoWindow();
-            meteo.Show();
+            navigation.changerFenetre(IdAcceuil, IdMeteo);
             this.Close();
         }
         public void ChangerVersPokemon()
         {
-            PokeWindow poke = new PokeWindow();
-            poke.Show();
+            navigation.changerFenetre(IdAcceuil, IdPoke);
             this.Close();
         }
         

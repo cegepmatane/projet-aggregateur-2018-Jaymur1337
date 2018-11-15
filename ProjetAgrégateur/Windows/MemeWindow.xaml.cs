@@ -21,6 +21,13 @@ namespace ProjetAgrégateur
     public partial class MemeWindow : Window
     {
         string rss = "https://www.reddit.com/r/memes.rss";
+
+        public int IdAcceuil = 0;
+        public int IdMemes = 1;
+        public int IdMessages = 2;
+        public int IdCrypto = 3;
+        public int IdMeteo = 4;
+        public int IdPoke = 5;
         public MemeWindow()
         {
             InitializeComponent();

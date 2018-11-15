@@ -58,7 +58,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Controlleur.cs" />
+    <Compile Include="Controleurs De fenètres\Controlleur.cs" />
+    <Compile Include="Scripts\Navigateur.cs" />
     <Compile Include="Scripts\Pokemon.cs" />
     <Compile Include="Scripts\PokemonDAO.cs" />
     <Compile Include="Windows\MeteoWindow.xaml.cs">
@@ -137,8 +138,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controleurs De fenètres\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
