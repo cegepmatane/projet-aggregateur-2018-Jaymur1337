@@ -8,7 +8,7 @@ namespace ProjetAgrégateur.Scripts
 {
     class Navigateur
     {
-        public Acceuil acceuil = new Acceuil();
+        public Acceuil acceuil;
         public CryptoWindow crypto = new CryptoWindow();
         public MemeWindow memes = new MemeWindow();
         public MessagesWindow messages = new MessagesWindow();
@@ -16,8 +16,9 @@ namespace ProjetAgrégateur.Scripts
         public PokeWindow poke = new PokeWindow();
 
 
-        public void initialiserFenetres()
+        public void initialiserFenetres(Acceuil Aceuil)
         {
+            this.acceuil = Aceuil;
             acceuil.Show();
             crypto.Hide();
             memes.Hide();
