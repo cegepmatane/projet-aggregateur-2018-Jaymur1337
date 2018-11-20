@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ProjetAgrégateur.Scripts;
 
 namespace ProjetAgrégateur
 {
@@ -26,13 +27,18 @@ namespace ProjetAgrégateur
         public int IdMeteo = 4;
         public int IdPoke = 5;
 
+        CryptoDAO crypto = new CryptoDAO();
+
         public CryptoWindow()
         {
             InitializeComponent();
+            crypto.listerMonnaies();
         }
 
+        //TODO changer pour la nouvelle navigation
         private void Home_Click(object sender, RoutedEventArgs e)
         {
+            
             Acceuil acceuil = new Acceuil();
             acceuil.Show();
             this.Close();

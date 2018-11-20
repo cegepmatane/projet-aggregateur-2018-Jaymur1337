@@ -30,6 +30,11 @@ namespace ProjetAgrégateur
         private Controlleur controlleur = new Controlleur();
         private Navigateur navigation = new Navigateur();
 
+        string rss = "https://www.reddit.com/r/memes.rss";
+        private List<Meme> listeMeme;
+        MemeDAO memeDao = new MemeDAO();
+        private Meme DernierMeme;
+
         public int IdAcceuil = 0;
         public int IdMemes = 1;
         public int IdMessages = 2;
@@ -41,11 +46,14 @@ namespace ProjetAgrégateur
         {
             InitializeComponent();
             afficherAcceuil();
+            navigation.initialiserFenetres(this);
+            listeMeme = memeDao.listerMemes(rss);
+            
         }
 
         public void afficherAcceuil()
         {
-
+            
         }
 
         private void News_Click(object sender, RoutedEventArgs e)

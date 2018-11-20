@@ -32,7 +32,7 @@ namespace ProjetAgrégateur
         public PokeWindow()
         {
             InitializeComponent();
-            
+            //listePokemon = Dao.listerPoke();
         }
 
         private void Home_Click(object sender, RoutedEventArgs e)

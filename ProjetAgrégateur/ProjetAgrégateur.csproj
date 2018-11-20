@@ -40,6 +40,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -59,6 +60,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Controleurs De fenètres\Controlleur.cs" />
+    <Compile Include="Scripts\CryptoDAO.cs" />
+    <Compile Include="Scripts\CryptoMonnaie.cs" />
     <Compile Include="Scripts\Navigateur.cs" />
     <Compile Include="Scripts\Pokemon.cs" />
     <Compile Include="Scripts\PokemonDAO.cs" />
