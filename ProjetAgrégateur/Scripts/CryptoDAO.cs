@@ -9,7 +9,7 @@ namespace ProjetAgrégateur
 {
     class CryptoDAO
     {
-
+        private bool bitcoinTrouvé = false;
        
         public List<CryptoMonnaie> listerMonnaies() 
         {
@@ -35,7 +35,7 @@ namespace ProjetAgrégateur
                 var nombre = monnaie["TotalCoinSupply"];
                
                 Console.WriteLine("Monnaie " + symbole + " : " + nom + "(" + nombre + ")");
-
+                
                 
                 CryptoMonnaie cryptomonnaie = new CryptoMonnaie();
                 cryptomonnaie.symbole = symbole;

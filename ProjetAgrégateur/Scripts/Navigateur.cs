@@ -21,6 +21,7 @@ namespace ProjetAgrégateur.Scripts
             this.acceuil = Aceuil;
             acceuil.Show();
             crypto.Hide();
+            crypto.setNav();
             memes.Hide();
             messages.Hide();
             meteo.Hide();

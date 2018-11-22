@@ -20,6 +20,7 @@ namespace ProjetAgrégateur
     /// </summary>
     public partial class CryptoWindow : Window
     {
+        Navigateur nav;
         public int IdAcceuil = 0;
         public int IdMemes = 1;
         public int IdMessages = 2;
@@ -32,7 +33,7 @@ namespace ProjetAgrégateur
         public CryptoWindow()
         {
             InitializeComponent();
-            crypto.listerMonnaies();
+            //crypto.listerMonnaies();
         }
 
         //TODO changer pour la nouvelle navigation
@@ -43,5 +44,7 @@ namespace ProjetAgrégateur
             acceuil.Show();
             this.Close();
         }
+
+        
     }
 }

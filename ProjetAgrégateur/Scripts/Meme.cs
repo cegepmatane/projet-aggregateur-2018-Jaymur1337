@@ -8,7 +8,19 @@ namespace ProjetAgrégateur.Scripts
 {
     class Meme
     {
-        public string titre { get; set; }
+        public string titre;
+
+        public string getTitre()
+        {
+            return titre;
+        }
+
+        public void setTitre(string title)
+        {
+            this.titre = title;
+        }
+
+        
 
         public string lienUtilisateur { get; set; }
 

@@ -13,6 +13,7 @@ namespace ProjetAgrégateur.Scripts
 {
     class MemeDAO
     {
+        private int conteur = 0;
         public List<Meme> listerMemes(string rss)
         {
             List<Meme> listeMeme = new List<Meme>();
@@ -32,20 +33,11 @@ namespace ProjetAgrégateur.Scripts
                 lecteurMeme.MoveToContent();
                 lecteurMeme.ReadToDescendant("title");
                 string titre = lecteurMeme.ReadInnerXml();
-                // Console.WriteLine(titre);
-
-                lecteurMeme.ReadToFollowing("name");
-                string nom = lecteurMeme.ReadInnerXml();
-                //Console.WriteLine(nom);
-
-                lecteurMeme.ReadToFollowing("uri");
-                string lienUtilisateur = lecteurMeme.ReadInnerXml();
-                //Console.WriteLine(lienUtilisateur);
-
+                Console.WriteLine(titre);
+                
                 Meme meme = new Meme();
-                meme.titre = titre;
-                meme.nomUtilisateur = nom;
-                meme.lienUtilisateur = lienUtilisateur;
+                meme.setTitre(titre); 
+                
 
                 listeMeme.Add(meme);
             }

@@ -33,7 +33,7 @@ namespace ProjetAgrégateur
         string rss = "https://www.reddit.com/r/memes.rss";
         private List<Meme> listeMeme;
         MemeDAO memeDao = new MemeDAO();
-        private Meme DernierMeme;
+        private Meme nouveauMeme;
 
         public int IdAcceuil = 0;
         public int IdMemes = 1;
@@ -45,15 +45,16 @@ namespace ProjetAgrégateur
         public Acceuil()
         {
             InitializeComponent();
-            afficherAcceuil();
             navigation.initialiserFenetres(this);
             listeMeme = memeDao.listerMemes(rss);
+            nouveauMeme = listeMeme.First();
+            afficherAcceuil();
             
         }
 
         public void afficherAcceuil()
         {
-            
+            DernierMeme.Text = nouveauMeme.titre;
         }
 
         private void News_Click(object sender, RoutedEventArgs e)

@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ProjetAgrégateur.Scripts;
 
 namespace ProjetAgrégateur
 {
@@ -19,6 +20,7 @@ namespace ProjetAgrégateur
     /// </summary>
     public partial class MessagesWindow : Window
     {
+        Navigateur nav;
         public int IdAcceuil = 0;
         public int IdMemes = 1;
         public int IdMessages = 2;
@@ -38,5 +40,7 @@ namespace ProjetAgrégateur
             acceuil.Show();
             this.Close();
         }
+
+        
     }
 }

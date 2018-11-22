@@ -14,7 +14,7 @@
         <Button Content="Pokemon" HorizontalAlignment="Left" Margin="10,233,0,0" VerticalAlignment="Top" Width="55" Height="40" Click="Pokemon_Click"/>
         <Canvas HorizontalAlignment="Left" Height="378" Margin="70,32,0,0" VerticalAlignment="Top" Width="714">
             <Label Content="Denier Meme : " Canvas.Left="542" Canvas.Top="10" Width="162"/>
-            <TextBlock Canvas.Left="542" TextWrapping="Wrap" Canvas.Top="35" Height="56" Width="161" Text="   "/>
+            <TextBlock x:Name = "DernierMeme" Canvas.Left="542" TextWrapping="Wrap" Canvas.Top="35" Height="56" Width="161" Text="   "/>
         </Canvas>
         <Button Content="Météo" HorizontalAlignment="Left" Margin="10,278,0,0" VerticalAlignment="Top" Width="55" Height="40" Click="Meteo_Click"/>
 
