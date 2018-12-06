@@ -28,12 +28,9 @@ namespace ProjetAgrégateur
     public partial class Acceuil : Window
     {
         private Controlleur controlleur = new Controlleur();
-        private Navigateur navigation = new Navigateur();
+        private Navigateur navigation;
 
-        string rss = "https://www.reddit.com/r/memes.rss";
-        private List<Meme> listeMeme;
-        MemeDAO memeDao = new MemeDAO();
-        private Meme nouveauMeme;
+        
 
         public int IdAcceuil = 0;
         public int IdMemes = 1;
@@ -45,16 +42,16 @@ namespace ProjetAgrégateur
         public Acceuil()
         {
             InitializeComponent();
+            navigation = new Navigateur();
             navigation.initialiserFenetres(this);
-            listeMeme = memeDao.listerMemes(rss);
-            nouveauMeme = listeMeme.First();
+           
             afficherAcceuil();
             
         }
 
         public void afficherAcceuil()
         {
-            DernierMeme.Text = nouveauMeme.titre;
+            
         }
 
         private void News_Click(object sender, RoutedEventArgs e)

@@ -59,10 +59,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Controleurs De fenètres\Controlleur.cs" />
+    <Compile Include="Scripts\Controlleur.cs" />
+    <Compile Include="Scripts\CryptoControlleur.cs" />
+    <Compile Include="Scripts\MemeControlleur.cs" />
     <Compile Include="Scripts\CryptoDAO.cs" />
     <Compile Include="Scripts\CryptoMonnaie.cs" />
+    <Compile Include="Scripts\MeteoControlleur.cs" />
     <Compile Include="Scripts\Navigateur.cs" />
+    <Compile Include="Scripts\PokeControlleur.cs" />
     <Compile Include="Scripts\Pokemon.cs" />
     <Compile Include="Scripts\PokemonDAO.cs" />
     <Compile Include="Windows\MeteoWindow.xaml.cs">

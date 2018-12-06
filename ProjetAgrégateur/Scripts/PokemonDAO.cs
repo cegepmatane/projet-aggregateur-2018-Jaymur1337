@@ -24,7 +24,7 @@ namespace ProjetAgrégateur.Scripts
             WebResponse reponseListePokemon = requeteListePokemon.GetResponse();
             StreamReader lecteurListePokemon = new StreamReader(reponseListePokemon.GetResponseStream());
             string json = lecteurListePokemon.ReadToEnd();
-            Console.WriteLine(json);
+           
 
 
             JavaScriptSerializer parseur = new JavaScriptSerializer();
@@ -38,11 +38,11 @@ namespace ProjetAgrégateur.Scripts
                 Pokemon pokemon = new Pokemon();
                 pokemon.nom = pokemonDynamique["name"].ToString();
                 string source = pokemonDynamique["url"].ToString();
-                Console.WriteLine(pokemon.nom + " - " + source);
+                
                 listePokemon.Add(pokemon);
             }
 
-            Console.WriteLine(nombre + " pokemons recus");
+            ;
             return listePokemon;
         }
     }

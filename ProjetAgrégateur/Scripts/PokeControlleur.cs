@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace ProjetAgrégateur.Scripts
 {
-    class Meme
+    class PokeControlleur
     {
-        public string Titre { get; set; }
-
-        public string lienUtilisateur { get; set; }
-
-        public string nomUtilisateur { get; set; }
-
-        
+        public void notifierAfficherPoke(PokeWindow poke)
+        {
+            poke.afficherPoke();
+        }
     }
 }

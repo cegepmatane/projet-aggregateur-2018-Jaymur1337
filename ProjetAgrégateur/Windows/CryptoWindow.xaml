@@ -12,7 +12,10 @@
         <Button Content="Mess" HorizontalAlignment="Left" Margin="10,143,0,0" VerticalAlignment="Top" Width="55" Height="40"/>
         <Button Content="Crypto" HorizontalAlignment="Left" Margin="10,188,0,0" VerticalAlignment="Top" Width="55" Height="40"/>
         <Button Content="Pokemon" HorizontalAlignment="Left" Margin="10,233,0,0" VerticalAlignment="Top" Width="55" Height="40"/>
-        <Canvas HorizontalAlignment="Left" Height="378" Margin="70,32,0,0" VerticalAlignment="Top" Width="714"/>
+        <Canvas HorizontalAlignment="Left" Height="378" Margin="70,32,0,0" VerticalAlignment="Top" Width="714">
+            <TextBlock x:Name="Nom" Canvas.Left="10" TextWrapping="Wrap" Text="name" Canvas.Top="10" Height="18" Width="107"/>
+            <TextBlock x:Name="Quantité" Canvas.Left="10" TextWrapping="Wrap" Text="quantité" Canvas.Top="62" Height="100" Width="200"/>
+        </Canvas>
         <Button Content="Météo" HorizontalAlignment="Left" Margin="10,278,0,0" VerticalAlignment="Top" Width="55" Height="40"/>
 
     </Grid>

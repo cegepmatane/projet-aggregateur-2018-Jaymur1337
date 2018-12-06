@@ -10,8 +10,8 @@ namespace ProjetAgrégateur
     class CryptoDAO
     {
         private bool bitcoinTrouvé = false;
-       
-        public List<CryptoMonnaie> listerMonnaies() 
+        private CryptoMonnaie cryptomonnaie;
+        public CryptoMonnaie trouverBitCoin() 
         {
             Console.WriteLine("CryptoMonnaieDAO.listerMonnaies()");
             string url = "https://www.cryptocompare.com/api/data/coinlist/";
@@ -25,27 +25,34 @@ namespace ProjetAgrégateur
             dynamic objet = parseur.Deserialize<dynamic>(json);
             var lesMonnaies = objet["Data"];
 
-            List<CryptoMonnaie> listeCryptomonnaie = new List<CryptoMonnaie>();
+            
             foreach (dynamic itemMonnaie in lesMonnaies)
             {
+                if (bitcoinTrouvé) break;
                 var monnaie = itemMonnaie.Value;
                 var symbole = monnaie["Symbol"];
-                var nom = monnaie["CoinName"];
+                string nom = monnaie["CoinName"];
                 var algorithme = monnaie["Algorithm"];
                 var nombre = monnaie["TotalCoinSupply"];
-               
+
+                if (nom == "BottleCaps")
+                    bitcoinTrouvé = true;
+                
+                    
+
                 Console.WriteLine("Monnaie " + symbole + " : " + nom + "(" + nombre + ")");
-                
-                
-                CryptoMonnaie cryptomonnaie = new CryptoMonnaie();
+
+                if (!bitcoinTrouvé) continue;
+
+                cryptomonnaie = new CryptoMonnaie();
                 cryptomonnaie.symbole = symbole;
                 cryptomonnaie.nom = nom;
                 cryptomonnaie.algorithme = algorithme;
                 cryptomonnaie.nombre = nombre;
-                listeCryptomonnaie.Add(cryptomonnaie);
+                
             }
 
-            return listeCryptomonnaie;
+            return cryptomonnaie;
         }
 
         public CryptoMonnaie detaillerMonnaie()

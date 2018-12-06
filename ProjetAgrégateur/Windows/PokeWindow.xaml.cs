@@ -21,6 +21,7 @@ namespace ProjetAgrégateur
     public partial class PokeWindow : Window
     {
         Navigateur nav;
+        private PokeControlleur controlleur = new PokeControlleur();
         public int IdAcceuil = 0;
         public int IdMemes = 1;
         public int IdMessages = 2;
@@ -29,12 +30,40 @@ namespace ProjetAgrégateur
         public int IdPoke = 5;
         PokemonDAO Dao = new PokemonDAO();
         private List<Pokemon> listePokemon = new List<Pokemon>();
+       
 
         public PokeWindow()
         {
             InitializeComponent();
-            //listePokemon = Dao.listerPoke();
+            controlleur.notifierAfficherPoke(this);
         }
+        public void afficherPoke()
+        {
+            listePokemon = Dao.listerPoke();
+            int i = 0;
+            foreach(Pokemon poke in listePokemon)
+            {
+                switch(i)
+                {
+                    case 0:
+                        this.Poke1.Text = poke.nom;
+                        i++;
+                        break;
+                    case 3:
+                        this.Poke2.Text = poke.nom;
+                        i++;
+                        break;
+                    case 6:
+                        this.Poke3.Text = poke.nom;
+                        i++;
+                        break;
+                    default:
+                        i++;
+                        break;
+                }
+            }
+        }
+
 
         private void Home_Click(object sender, RoutedEventArgs e)
         {

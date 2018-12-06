@@ -13,35 +13,43 @@ namespace ProjetAgrégateur.Scripts
 {
     class MemeDAO
     {
-        private int conteur = 0;
+        private int conteurMeme = 0;
         public List<Meme> listerMemes(string rss)
         {
-            List<Meme> listeMeme = new List<Meme>();
-            Console.WriteLine("MemeDao.ListerMemes();");
+            
+            List<Meme> liste = new List<Meme>();
+            //Console.WriteLine("MemeDao.ListerMemes();");
             HttpWebRequest demandeMemes = (HttpWebRequest)WebRequest.Create(rss);
             demandeMemes.Method = "GET";
-            demandeMemes.UserAgent = "Mozilla Firefox";
-
+            demandeMemes.UserAgent = "Mozilla FireFox";
             WebResponse reponse = demandeMemes.GetResponse();
             StreamReader lecteur = new StreamReader(reponse.GetResponseStream());
 
             string xml = lecteur.ReadToEnd();
             XElement MemesXML = XElement.Parse(xml);
+          
+
             foreach (XElement memeXML in MemesXML.Elements())
             {
+                if (conteurMeme >= 6) break;
                 XmlReader lecteurMeme = memeXML.CreateReader();
-                lecteurMeme.MoveToContent();
+
+                string test = memeXML.Name.LocalName;
+
                 lecteurMeme.ReadToDescendant("title");
-                string titre = lecteurMeme.ReadInnerXml();
-                Console.WriteLine(titre);
-                
+                string titreMeme = lecteurMeme.ReadInnerXml();
+                if (titreMeme == "") continue;
+                Console.WriteLine(titreMeme);
+
+                lecteurMeme.ReadToFollowing("Content");
+
                 Meme meme = new Meme();
-                meme.setTitre(titre); 
+                meme.Titre = titreMeme.ToString(); 
                 
 
-                listeMeme.Add(meme);
+                liste.Add(meme);
             }
-            return listeMeme;
+            return liste;
         }
     }
 }

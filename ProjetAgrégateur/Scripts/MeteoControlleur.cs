@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace ProjetAgrégateur.Scripts
 {
-    class Meme
+    class MeteoControlleur
     {
-        public string Titre { get; set; }
 
-        public string lienUtilisateur { get; set; }
 
-        public string nomUtilisateur { get; set; }
 
         
     }

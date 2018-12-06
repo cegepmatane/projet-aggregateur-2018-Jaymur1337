@@ -9,6 +9,7 @@ namespace ProjetAgrégateur.Scripts
     class Navigateur
     {
         public Acceuil acceuil;
+        
         public CryptoWindow crypto = new CryptoWindow();
         public MemeWindow memes = new MemeWindow();
         public MessagesWindow messages = new MessagesWindow();
@@ -21,7 +22,6 @@ namespace ProjetAgrégateur.Scripts
             this.acceuil = Aceuil;
             acceuil.Show();
             crypto.Hide();
-            crypto.setNav();
             memes.Hide();
             messages.Hide();
             meteo.Hide();

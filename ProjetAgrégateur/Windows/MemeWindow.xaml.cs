@@ -13,6 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ProjetAgrégateur.Scripts;
 
+
+
+
 namespace ProjetAgrégateur
 {
     /// <summary>
@@ -21,7 +24,12 @@ namespace ProjetAgrégateur
     public partial class MemeWindow : Window
     {
         Navigateur nav;
-        string rss = "https://www.reddit.com/r/memes.rss";
+        MemeControlleur CMeme = new MemeControlleur();
+        
+
+
+        
+        List<Meme> listeMeme;
 
         public int IdAcceuil = 0;
         public int IdMemes = 1;
@@ -35,55 +43,12 @@ namespace ProjetAgrégateur
         public MemeWindow()
         {
             InitializeComponent();
-            afficherMemes();
-
-        }
-
-        private void afficherMemes()
-        {
-            MemeDAO Memes = new MemeDAO();
-            List<Meme> listeMeme = Memes.listerMemes(rss);
-            foreach (Meme meme in listeMeme)
+            listeMeme = new List<Meme>();
+            CMeme.NotifierAfficherMemes(this);
             
-
-                switch (conteurMeme)
-                {
-                    case 0:
-                        Console.WriteLine(meme.titre);
-                        Meme1.Text = "Meme 1 :" + meme.titre;
-                        conteurMeme++;
-                        break;
-                    case 1:
-                        Console.WriteLine(meme.titre);
-                        Meme2.Text = "Meme 2 :" + meme.titre;
-                        conteurMeme++;
-                        break;
-                    case 2:
-                        Console.WriteLine(meme.titre);
-                        Meme3.Text = "Meme 3 :" + meme.titre;
-                        conteurMeme++;
-                        break;
-                    case 3:
-                        Console.WriteLine(meme.titre);
-                        Meme4.Text = "Meme 4 :" + meme.titre;
-                        conteurMeme++;
-                        break;
-                    case 4:
-                        Console.WriteLine(meme.titre);
-                        Meme5.Text = "Meme 5 :" + meme.titre;
-                        conteurMeme++;
-                        break;
-                    case 5:
-                        Console.WriteLine(meme.titre);
-                        Meme6.Text = "Meme 6 :" + meme.titre;
-                        conteurMeme++;
-                        break;
-                    default:
-                        break;
-                }
-                
-
         }
+
+       
 
         private void Home_Click(object sender, RoutedEventArgs e)
         {
@@ -92,6 +57,8 @@ namespace ProjetAgrégateur
             acceuil.Show();
             this.Close();
         }
+
+
 
 
     }
